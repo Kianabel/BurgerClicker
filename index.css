@@ -1,0 +1,81 @@
+header {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    background-color: gold;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    background-image: url(./burgers/background.png);
+    background-repeat: no-repeat;
+    background-position: -300px;
+    background-size: cover;
+    background-color: black;
+}
+
+#burger {
+    background-image: url("./burgers/burger0.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+    width: 400px;
+    margin: auto auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+/*#burger:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+*/
+
+p {
+    font-size: 50px;
+    width: 70%;
+    margin: auto;
+    color: black;
+    background-image: url(./burgers/button0.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 12px;
+    border: 5px;
+}
+
+#shop {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 55px;
+}
+
+button {
+    font-weight: bold;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 30px;
+    height: 75px;
+    width: 325px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(./burgers/button0.png);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
