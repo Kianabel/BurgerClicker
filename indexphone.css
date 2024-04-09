@@ -1,0 +1,77 @@
+@media only screen and (max-width: 600px) {
+    #gamecontainer {
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+    }
+  }  
+
+  @media only screen and (max-width: 600px) {
+    #ronaldleft {
+        height: 200px;
+        width: 70px;
+        margin-left: auto;
+        margin-right: 0px;
+    }
+    
+    #ronaldright {
+        height: 200px;
+        width: 70px;
+        margin-right: auto;
+        margin-left: 0px;
+    }
+  }  
+
+@media only screen and (max-width: 600px) {
+    #burger {
+        height: 200px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    header {
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+  }  
+  @media only screen and (max-width: 600px) {
+    p {
+        margin-bottom: 0px;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: 555%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    button {
+        font-weight: bold;
+        font-size: 10px;
+        margin: auto;
+        margin-top: 15px;
+        height: 50px;
+        width: 190px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(./burgers/button0.png);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #shop {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 27px;
+    }
+  }

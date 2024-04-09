@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <header>
-            Lutger-Burger
-        </header>
-        <title>
-            Lutger-Burger
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div id="gamecontainer">
+  <head>
+    <header>Lutger-Burger</header>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Lutger-Burger</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="indexphone.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="gamecontainer">
+        <canvas id="ronaldleft"></canvas>
         <canvas id="burger"></canvas>
-        <div id="numbercontainer">
-            <p id="number">B</p>
-        </div>
-        <div id="shop">
-            Shop:
-            <button id="shopspace">Activate Spacebar - 1000 Burger</button>
-            <button id="shopmultiplier">Click Multiplier -</button>
-            <button id="shopspace">Activate Spacebar</button>
-        </div>
+        <canvas id="ronaldright"></canvas>
     </div>
-    </body>
-    <script src="index.js" type="module"></script>
+      <div id="numbercontainer">
+        <p id="number">B</p>
+      </div>
+
+      <div id="shop">
+        Shop:
+        <button id="shopspace">Activate Spacebar 1000 Burger</button>
+        <button id="shopmultiplier">Click Multiplier</button>
+        <button id="shopauto">Auto Burgerererer 300 Burger</button>
+      </div>
+    
+  </body>
+  <script src="index.js" type="module"></script>
 </html>
