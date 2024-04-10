@@ -8,11 +8,13 @@ const shopauto = document.getElementById("shopauto");
 const bps = document.getElementById("bps")
 
 let autoronalds = 0;
+let autoronaldvalue = 0;
 let burgerstate = 0;
 let value = 0;
 let clickmultiplier = 1;
 let spacebarmode = 1;
 let cost = 100;
+let cost2 = 300;
 let einheit = " B";
 let displaynumber = value;
 
@@ -97,7 +99,7 @@ function burgereinheit() {
     setValue();
   } else if (value < 1000) {
     einheit = " B";
-    displaynumber = value;
+    displaynumber = (value).toFixed(1);
     setValue();
   }
 }
@@ -177,7 +179,7 @@ document.addEventListener("keydown", (event) => {
 function fautoronalds() {
   if (autoronalds > 0) {
     window.setInterval(function () {
-      value = value + autoronalds;
+      value = value + autoronaldvalue;
       burgereinheit();
     }, 100);
   }
@@ -196,15 +198,23 @@ shopmultiplier.addEventListener("click", () => {
   if (value >= cost) {
     clickmultiplier = clickmultiplier * 2;
     value = value - cost;
-    cost = cost * 3;
+    cost = cost * 1.5;
     shopmultiplier.innerHTML = "Click Multiplier  " + cost + " Burger";
     burgereinheit();
   }
 });
 shopauto.addEventListener("click", () => {
-  if (value > 300) {
+  if (value > cost2) {
+
+    if(autoronaldvalue == 0) {
+      autoronaldvalue = 1
+    } else {
+      autoronaldvalue = autoronaldvalue * 1.25
+    }
     autoronalds = autoronalds + 1;
-    value = value - 300;
+    value = value - cost2;
+    cost2 = cost2 * 1.25;
+    shopauto.innerHTML = "Auto Burgerererer " + (cost2).toFixed(0) + " Burger";
     burgereinheit();
     fautoronalds();
   }

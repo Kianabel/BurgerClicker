@@ -38,13 +38,17 @@
   }  
   @media only screen and (max-width: 600px) {
     p {
-        margin-bottom: 0px;
+      padding-top: 0px;
+        margin-bottom: 20px;
+        height: 5px;
+        font-size: 10px;
+        background-image: url("");
     }
   }
 
 @media only screen and (max-width: 600px) {
     body {
-        background-size: 555%;
+        background-size: 600%;
     }
   }
 
@@ -70,8 +74,16 @@
     #shop {
         display: flex;
         flex-direction: column;
+        column-gap: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
         margin-top: 5px;
         margin-bottom: 20px;
         font-size: 27px;
     }
+
+    .shoptext {
+      margin-top: 20px;
+      font-size: 27px;
+  }
   }
