@@ -18,7 +18,6 @@ let cost2 = 300;
 let einheit = " B";
 let displaynumber = value;
 
-
   
 
 
@@ -75,9 +74,32 @@ function bpsmeter() {
 }
 
 function burgereinheit() {
-  //convert value
-
-  if (value > 1000000000000000) {
+  //convert value 
+  if(value > 1000000000000000000000000000000000) {
+    einheit = " Fuck"
+    displaynumber = "Fat";
+    setValue();
+  } else if(value > 1000000000000000000000000000000) {
+    einheit = " QB"
+    displaynumber = (value / 1000000000000000000000000000000).toFixed(1);
+    setValue();
+  } else if (value > 1000000000000000000000000000) {
+    einheit = " RB"
+    displaynumber = (value / 1000000000000000000000000000).toFixed(1);
+    setValue();
+  } else if (value > 1000000000000000000000000) {
+    einheit = " YB"
+    displaynumber = (value / 1000000000000000000000000).toFixed(1);
+    setValue();
+  } else if (value > 1000000000000000000000) {
+    einheit = " ZB"
+    displaynumber = (value / 1000000000000000000000).toFixed(1);
+    setValue();
+  } else if (value > 1000000000000000000) {
+    einheit = " EB"
+    displaynumber = (value / 1000000000000000000).toFixed(1);
+    setValue();
+  } else if (value > 1000000000000000) {
     einheit = " PB";
     displaynumber = (value / 1000000000000000).toFixed(1);
     setValue();
@@ -187,7 +209,7 @@ function fautoronalds() {
 
 //shop
 shopspace.addEventListener("click", () => {
-  if (value > 999) {
+  if (value > 999999) {
     spacebarmode = 1;
     value = value - 10;
     burgereinheit();
@@ -199,7 +221,7 @@ shopmultiplier.addEventListener("click", () => {
     clickmultiplier = clickmultiplier * 2;
     value = value - cost;
     cost = cost * 1.5;
-    shopmultiplier.innerHTML = "Click Multiplier  " + cost + " Burger";
+    shopmultiplier.innerHTML = "Click Multiplier  " + (cost).toFixed(0) + " Burger";
     burgereinheit();
   }
 });
