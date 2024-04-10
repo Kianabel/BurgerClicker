@@ -5,6 +5,8 @@ const number = document.getElementById("number");
 const shopspace = document.getElementById("shopspace");
 const shopmultiplier = document.getElementById("shopmultiplier");
 const shopauto = document.getElementById("shopauto");
+const bps = document.getElementById("bps")
+
 let autoronalds = 0;
 let burgerstate = 0;
 let value = 0;
@@ -13,7 +15,12 @@ let spacebarmode = 1;
 let cost = 100;
 let einheit = " B";
 let displaynumber = value;
-setValue();
+
+
+  
+
+
+burgereinheit();
 
 //draw ronalds
 
@@ -55,6 +62,16 @@ window.onload = function() {
 };
 */
 
+
+//das burger meter
+function bpsmeter() {
+  let bps1 = displaynumber;
+  setTimeout(function () {
+    let bps2 = displaynumber;
+    bps.innerHTML = (bps2-bps1).toFixed(1) + " " + einheit + "/s"
+  }, 1000);
+}
+
 function burgereinheit() {
   //convert value
 
@@ -87,6 +104,7 @@ function burgereinheit() {
 
 function setValue() {
   number.innerHTML = displaynumber + einheit;
+  bpsmeter(displaynumber)
 }
 
 //burgercycle
