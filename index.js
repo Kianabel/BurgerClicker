@@ -76,8 +76,8 @@ function bpsmeter() {
 function burgereinheit() {
   //convert value 
   if(value > 1000000000000000000000000000000000) {
-    einheit = " Fuck"
-    displaynumber = "Fat";
+    einheit = ""
+    displaynumber = "Fat Fuck";
     setValue();
   } else if(value > 1000000000000000000000000000000) {
     einheit = " QB"
@@ -133,6 +133,10 @@ function setValue() {
 
 //burgercycle
 burger.addEventListener("click", () => {
+  burgercycle()
+});
+
+function burgercycle() {
   if (burgerstate == 0) {
     burger.style.backgroundImage = "url(./burgers/burger1.png)"; //bite 1
     burgerstate = 1;
@@ -146,7 +150,7 @@ burger.addEventListener("click", () => {
     burger.style.backgroundImage = "url(./burgers/burger0.png)"; //default
     burgerstate = 0;
   }
-});
+}
 
 //buttoncycle
 shopspace.addEventListener("click", () => {
@@ -194,6 +198,7 @@ document.addEventListener("keydown", (event) => {
     if (event.code == "Space") {
       value = value + clickmultiplier;
       burgereinheit();
+      burgercycle()
     }
   }
 });
